@@ -14,6 +14,7 @@ var statistics = {
     clicks: 0,
     clickSpeed: 0,
     clickSpeedAvarge: 0,
+    clicksReal: 0,
     wholeTime: 0,
 }
 
@@ -44,6 +45,8 @@ function isGameRunning(state) {
 function clickCount() {
     if (gameRunning == true) {
         statistics.clicks += upgrade.clicks * upgrade.clicks;
+        
+        statistics.clicksReal++
         getStatisticClickspeed()
         showStatistics();
     }
@@ -89,7 +92,7 @@ time()
 // Show
 function showStatisticsClickSpeed() {
     document.getElementById("clickSpeedText").innerHTML = "ClickSpeed: " + statistics.clickSpeed * 10 + " ms";
-    document.getElementById("clickSpeedAvargeText").innerHTML = "ClickSpeedAvarge: " + Math.round(statistics.clickSpeedAvarge / statistics.clicks) + " ms";
+    document.getElementById("clickSpeedAvargeText").innerHTML = "ClickSpeedAvarge: " + Math.round(statistics.clickSpeedAvarge / statistics.clicksReal) + " ms";
 }
 
 function showStatistics() {
@@ -124,7 +127,7 @@ function log() {
 
     console.log("statistics.clicks: " + statistics.clicks)
     console.log("statistics.clickSpeed: " + statistics.clickSpeed * 10)
-    console.log("statistics.clickSpeedAvarge: " + statistics.clickSpeedAvarge / statistics.clicks)
+    console.log("statistics.clickSpeedAvarge: " + statistics.clickSpeedAvarge / statistics.clicksReal)
     console.log("statistics.wholeTime: " + statistics.wholeTime)
 
     console.log(" ")
@@ -166,7 +169,7 @@ function buyAutoClicker() {
                 document.getElementById("notEnoughClicksText").style.visibility = "hidden"
                 clearInterval(intervalNotEnoughClicks)
             }
-        }, 100) 
+        }, 100)
     }
 }
 
@@ -190,7 +193,7 @@ function buyUpgradeClicks() {
                 document.getElementById("notEnoughClicksText").style.visibility = "hidden"
                 clearInterval(intervalNotEnoughClicks)
             }
-        }, 100) 
+        }, 100)
     }
 }
 
