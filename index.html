@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Img/clickerIcon.ico">
+</head>
+<body id="body">
+    
+
+    <div id="upgrade">
+        <button id="upgrade1" class="buttons upgrades">Upgrade clicks <br> cost:</button>
+        <button id="upgrade2" class="buttons upgrades">Auto clicker <br> cost: </button>
+    </div>
+
+    <div id="statistic">
+        <p id="timeText"        class="text statisticText"  >Time:                  </p>
+        <p id="clickSpeedText"  class="text statisticText"  >Clickspeed:            </p> 
+        <p id="clickSpeedAvargeText"class="text statisticText"  >ClickSpeedDurchschnitt:</p>
+        <p id="clickText"       class="text statisticText"  >Clicks:                </p>
+       
+    </div>
+
+    <button  id="clickMe" class="buttons" onclick="clickCount()" onmouseover="isGameRunning(true)" onmouseout="isGameRunning(false)" >Click me</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
