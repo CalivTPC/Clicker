@@ -154,8 +154,22 @@ function buyAutoClicker() {
 
         giveUpgradePrice()
         autoClicker()
+    } else {
+        document.getElementById("notEnoughClicksText").style.visibility = "visible"
+        let intervalNotEnoughClicks
+        let timeBeforDisappear = 0
+        clearInterval(intervalNotEnoughClicks)
+
+        intervalNotEnoughClicks = setInterval(function () {
+            timeBeforDisappear++
+            if (timeBeforDisappear > 40) {
+                document.getElementById("notEnoughClicksText").style.visibility = "hidden"
+                clearInterval(intervalNotEnoughClicks)
+            }
+        }, 100) 
     }
 }
+
 
 function buyUpgradeClicks() {
     if (upgrade.clicksCost <= statistics.clicks) {
@@ -164,6 +178,19 @@ function buyUpgradeClicks() {
 
         giveUpgradePrice()
 
+    } else {
+        document.getElementById("notEnoughClicksText").style.visibility = "visible"
+        let intervalNotEnoughClicks
+        let timeBeforDisappear = 0
+        clearInterval(intervalNotEnoughClicks)
+
+        intervalNotEnoughClicks = setInterval(function () {
+            timeBeforDisappear++
+            if (timeBeforDisappear > 40) {
+                document.getElementById("notEnoughClicksText").style.visibility = "hidden"
+                clearInterval(intervalNotEnoughClicks)
+            }
+        }, 100) 
     }
 }
 

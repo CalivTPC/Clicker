@@ -40,3 +40,12 @@ body{
 .text{
     color: white;
 }
+
+#notEnoughClicksText{
+    position: absolute;
+    bottom: 1vh;
+    left: 2vw;
+    font-size: 3vw;
+    font-weight: bold;
+    visibility: hidden;
+}
