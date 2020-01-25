@@ -12,7 +12,7 @@
     
 
     <div id="upgrade">
-        <button id="upgrade1" class="buttons upgrades" onclick="buyUpgradeClicks()">Upgrade clicks <br> cost:</button>
+        <button id="upgrade1" class="buttons upgrades" onclick="buyUpgrademoney()">Upgrade clicks <br> cost:</button>
         <button id="upgrade2" class="buttons upgrades" onclick="buyAutoClicker()" >Auto clicker <br> cost: </button>
     </div>
 
@@ -20,11 +20,12 @@
         <p id="timeText"        class="text statisticText"  >Click Time:            </p>
         <p id="clickSpeedText"  class="text statisticText"  >Clickspeed:            </p> 
         <p id="clickSpeedAvargeText"class="text statisticText"  >ClickSpeedAvarge:  </p>
-        <p id="clickText"       class="text statisticText"  >Clicks:                </p>
+        <p id="clicksText"      class="text statisticText"  >Clicks:                </p>
+        <p id="moneyText"       class="text statisticText"  >Money:                 </p>
        
     </div>
 
-    <p id="notEnoughClicksText" class="text">Not enough Clicks</p>
+    <p id="notEnoughMoneyText" class="text">Not enough Clicks</p>
 
     <button  id="clickMe" class="buttons" onclick="clickCount()" onmouseover="isGameRunning(true)" onmouseout="isGameRunning(false)" >Click me</button>
 

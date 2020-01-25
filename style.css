@@ -41,7 +41,7 @@ body{
     color: white;
 }
 
-#notEnoughClicksText{
+#notEnoughMoneyText{
     position: absolute;
     bottom: 1vh;
     left: 2vw;
